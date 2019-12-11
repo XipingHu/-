@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ctex}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+\author{Xiping Hu}
+\title{积分中三角换元的一点问题}
+\begin{document}
+\maketitle
+\noindent \textbf{问题} \quad 为什么积分的时候可以做三角变换？三角函数值域不能覆盖R域,我们怎么知道在1之外这个变换是正确的？ by fht
+\vspace{1cm}
+\newline
+\noindent 
+\textbf{解答}\quad
+考虑积分
+\begin{equation}
+  \label{}
+\int {\frac {dx}{\sqrt {a^{2}-x^{2}}}}
+\end{equation}
+我们令
+\begin{equation}
+  \label{}
+x = a \sin \theta
+\end{equation}
+则有
+\begin{equation}
+  \label{}
+dx=a\cos \theta d \theta 
+\end{equation}
+\begin{equation}
+  \label{}
+\theta = \arcsin \left( \frac{x}{a} \right )
+\end{equation}
+则有
+\begin{equation}
+  \label{}
+\begin{aligned}\int {\frac {dx}{\sqrt {a^{2}-x^{2}}}}&=\int {\frac {a\cos \theta \,d\theta }{\sqrt {a^{2}-a^{2}\sin ^{2}\theta }}}\\&=\int {\frac {a\cos \theta \,d\theta }{\sqrt {a^{2}(1-\sin ^{2}\theta )}}}\\&=\int {\frac {a\cos \theta \,d\theta }{\sqrt {a^{2}\cos ^{2}\theta }}}\\&=\int d\theta \\&=\theta +C\\&=\arcsin \left({\frac {x}{a}}\right)+C.\end{aligned}
+\end{equation}
+\par 其中在这个函数中$x$的定义域为$[-a.a]$，$\theta$的定义域为$[-\frac{\pi}{2} , \frac{\pi}{2}]$
+当$\theta = -\frac{\pi}{2}$时，$\sin \theta=-1$，$x$正好在边界$x=-a$上。
+当$\theta = \frac{\pi}{2}$时，$\sin \theta=1$，$x$正好在边界$x=a$上。
+这没有任何定义域冲突或者不符合的问题。
+\end{document}\frac{numerator}{denominator}
+
+
